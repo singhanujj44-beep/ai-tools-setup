@@ -22,4 +22,4 @@ markdown
 ## Issues  
 Gatekeeper blocked .dmg file installation - solved by changing system settings.
 Un-familiarity with tools - used claude and youtube to assist
-Unaware with password invisiblity in terminal at cursor - claude told me that
+Unaware with password invisibility in terminal at cursor - claude told me that
