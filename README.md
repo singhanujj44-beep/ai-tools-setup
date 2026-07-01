@@ -16,7 +16,8 @@ markdown
 4. Created this public GitHub repo
 5. Installed Xcode command line tools
 6. Created personal access token for GitHub
-7. Comitted and pushed README
+7. Used Cursor & its terminal to create file
+8. Comitted and pushed README
 
 ## Issues  
 Gatekeeper blocked .dmg file installation - solved by changing system settings.
