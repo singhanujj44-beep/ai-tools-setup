@@ -1,4 +1,4 @@
-# AI Search (AEO/GEO) Playbook & SOP
+# AI Search (AEO/GEO) Playbook
  
 **Author:** Anuj Singh <br>
 **Sources reviewed:** video interviews+ podcasts + LinkedIn posts (major sources listed below)
