@@ -1,4 +1,4 @@
-# AI Search (AEO/GEO) Playbook
+# AI Search (AEO/GEO) Playbook(with SOP)
  
 **Author:** Anuj Singh <br>
 **Sources reviewed:** video interviews+ podcasts + LinkedIn posts (major sources listed below)
@@ -46,3 +46,174 @@ ChatGPT, Claude, and Gemini each get used for different jobs rather than one too
 - **SparkToro, buzzabout.ai, Similarweb**<br> audience and topic-discovery tools for understanding where an audience already congregates before creating content aimed at them (source: Aleyda Solis).
 relevant note: GA-style analytics tends to undercount AI-influenced conversions, due to cookie consent, GDPR, and JavaScript-rendering gaps in how AI referral traffic gets tracked (source: Ryan Law) 
 ---
+## 3. End-to-End Workflow
+ 
+1. Topic & entity research
+2. Off-page ecosystem mapping (competitor gap analysis)
+3. Content brief creation
+4. AI-assisted drafting
+5. Human editing & fact-check
+6. On-page technical optimization for AI crawlers
+7. Off-page distribution (Reddit, YouTube, affiliates, digital PR)
+8. Publishing
+9. Performance & citation monitoring
+10. Content refresh cycle
+---
+ 
+## 4. SOP for Each Stage
+ 
+### 4.1 Topic & Entity Research SOP
+1. Input business niche/vertical into a citation-mapping tool (e.g. Brand Radar) to see which domains and pages are most commonly cited by AI systems for that niche.
+2. Run a competitor "entity gap" comparison — pull conversations where a competitor is mentioned and your brand is not. This reveals topics where the AI's "understanding" of your brand has a gap it doesn't have for competitors.
+3. Segment findings by vertical rather than applying generic benchmarks — Reddit matters heavily for some verticals (regulated industries, consumer products) and much less for others; the highest-performing teams segment down instead of using catch-all data studies.
+4. Cross-check discovered topics against your own subject-matter expertise — avoid chasing topics just because they're trending in citation data if they're not on-brand or backed by real in-house expertise.
+5. Document rationale for each topic selected, including which ecosystem (own site / Reddit / affiliate / YouTube) it's meant to win in.
+### 4.2 Competitor & Off-Page Ecosystem Analysis SOP
+1. Identify the "off-page SEO era" reality: content about your brand on other domains can matter more for AI visibility than your own site content, even without a backlink.
+2. Map the four ecosystems (own site, Reddit, third-party/affiliate, YouTube) and note where competitors have a presence you don't.
+3. Identify high-authority niche third-party/affiliate sites relevant to your vertical — even ones a broad industry study wouldn't surface, since niche affiliate authority can dominate citations for specific product categories.
+4. Document a prioritized "where to get mentioned" list with a rough allocation of effort/budget per channel.
+### 4.3 Content Brief Creation SOP
+1. State the brief's single clear topic — avoid briefs that span multiple ideas, since diluted-topic pages reduce machine-parsed relevance per passage.
+2. Require BLUF (bottom-line-up-front) structure: open every section with the clearest, most direct statement of the point before elaborating.
+3. Require declarative, confident sentence structure over hedged language.
+4. Flag whether the piece needs SME (subject-matter-expert) input or can be produced by the content/AI system alone.
+5. Note freshness commitment — pages that are updated more recently are more likely to be preferred by ChatGPT/Copilot/Gemini in RAG retrieval than older, higher-authority organic-ranking pages.
+### 4.4 AI-Assisted Drafting SOP
+1. Break the brief into components and draft prompts per component rather than a single "write me 1,000 words" prompt.
+2. Where relevant, ground drafting in a custom index/data source (a lightweight RAG pipeline over your own real data) rather than the model's general knowledge.
+3. Use AI to accelerate, not replace — content produced without real human expertise and brand voice behind it tends toward generic, sometimes wrong output.
+4. For regulated industries, route through a compliance-review layer (human or AI-assisted compliance-check agent) before publishing.
+### 4.5 Human Editing SOP
+1. Review for brand alignment — ask "is this actually on-brand," not just "is this accurate."
+2. Review for UX quality, not just correctness — high bounce/low time-on-site is a common failure mode of unedited AI content.
+3. Track "AI as bottleneck vs. human as bottleneck" as a proxy quality metric for your content system — if humans are the bottleneck, the system is working.
+### 4.6 On-Page Technical Optimization SOP
+1. Check page speed specifically for real-time-fetching AI crawlers (ChatGPT, Perplexity) — these give up and skip slow pages, logged as `499` server responses, which most SEO tools won't flag by default.
+2. Minimize reliance on JavaScript for critical content — most AI crawlers don't render JS as reliably as modern Google crawling does.
+3. Structure content in short, single-topic paragraphs with clear headers (chunking-friendly formatting) to align with passage-level retrieval.
+4. Increase entity richness — mention related brands, topics, and discrete concepts explicitly, since AI systems appear to weight entity-dense text more heavily in citation likelihood.
+5. Add periodic "document context" reminders in long pages so meaning survives if a page is chunked for retrieval.
+### 4.7 Internal Linking SOP
+Link your content to:<br>
+Related guides,
+Supporting tutorials,
+Category pages,
+Product or service pages<br>
+Use descriptive anchor text (e.g., "keyword clustering guide" instead of "click here")
+ 
+### 4.8 Off-Page Distribution SOP
+1. Prioritize by ecosystem weight for your specific vertical rather than a one-size-fits-all channel mix.
+2. Pursue "secondhand search traffic": get mentioned on sites that already rank/get cited for your target topics, via partnerships, affiliate deals, or sponsorships, rather than relying only on your own domain authority.
+3. Consider under-used training data surfaces: GitHub repos, Wikipedia pages, original research papers, and patents are all near guaranteed to be included in model training data.
+### 4.9 Publishing SOP
+Track performance using:
+Google Search Console
+Google Analytics
+Ahrefs or SEMrush
+
+Monitor:
+Impressions
+Click-through rate (CTR)
+Rankings
+Organic traffic
+User engagement
+ 
+### 4.10 Performance Monitoring SOP
+1. Monitor citation count and citation accuracy/sentiment per AI platform separately — citation behavior differs meaningfully between ChatGPT, Perplexity, and AI Mode.
+2. Monitor for hallucinated URLs — pages your analytics shows visits to that return 404s, indicating an AI system fabricated a URL for your brand.
+3. Treat AI-visibility-tracker numbers as directionally useful, not accurate — judge these tools on consistent methodology (precision) over time rather than as ground truth (accuracy), and sample multiple times per day and average, given the probabilistic nature of LLM outputs.
+4. Filter your Google Search Console data for keywords that trigger AI Overviews to separate "AI Overview traffic loss" from genuine ranking loss.
+### 4.11 Content Refresh Cycle SOP
+1. Prioritize refreshing pages already known to be cited by AI (pull the list from your citation tracker) over blind refreshing of the whole site.
+2. Weight refresh frequency toward freshness-sensitive topics — content in fast-moving categories benefits more from frequent updates than evergreen reference content.
+---
+ 
+## 5. Prompt Library
+ 
+- **Content brief prompt** — built around a "decompose into components" approach, with BLUF/declarative-sentence guidance.
+- **Entity-gap analysis prompt** — built around a competitor-comparison workflow using a citation-tracking tool like Brand Radar.
+- **Freshness-refresh triage prompt** — built around freshness-correlation findings.
+---
+ 
+## 6. Quality Assurance Checklist
+ 
+| Check | Sourced? |
+|---|---|
+| Brand/on-brand alignment | Yes |
+| Human-expertise / SME review (not fully AI-authored) | Yes |
+| UX quality / bounce-rate risk | Yes |
+| Chunking / short single-topic paragraphs | Yes |
+| Entity richness | Yes |
+| Freshness / last-updated date | Yes |
+| Page-speed / 499 error check | Yes |
+| JavaScript-rendering dependency | Yes |
+| EEAT review | Not sourced |
+| Plagiarism check | Not sourced |
+| Meta title / meta description | Not sourced |
+| Schema markup | Not sourced |
+| Readability | Partial — BLUF/declarative-sentence guidance only |
+ 
+---
+ 
+## 7. Metrics & KPIs
+ 
+| Metric | Sourced? |
+|---|---|
+| Branded web mentions (off-site) | Yes — ~0.67 correlation with AI Overview appearance |
+| Citation count by platform | Yes |
+| Citation sentiment/accuracy | Yes |
+| Conversion rate (over raw traffic) | Yes |
+| Hallucinated-URL rate | Yes |
+| 499 error rate on key pages | Yes |
+| Organic traffic, CTR, keyword rankings, time on page, bounce rate | Not sourced, aside from bounce rate as a UX-quality signal (see QA checklist) |
+ 
+---
+ 
+## 8. Where Experts Disagree
+ 
+### Disagreement 1: Should AI write the first draft with minimal human involvement?
+- **Mike King** has generated content at scale using AI since 2020, and argues that "non-commodity" human-only content is a moat that erodes over time — if you can convert your unique data/expertise into structured data, you can eventually generate content at scale that captures it.
+- **Aleyda Solis** argues AI should accelerate content production but should not be the final output — content produced without real human expertise and brand voice behind it tends toward generic, sometimes wrong output.
+- **My take:**
+### Disagreement 2: How technical does chunking/content-structure need to be?
+- **Mike King** treats chunking as a real technical concept worth engineering deliberately — mapping content structure to how passage-level retrieval actually works.
+- **Ryan Law** is dismissive of the jargon, framing it as "just good writing" — clear structure, short sentences, BLUF — without needing to think in retrieval-system terms.
+- **My take:**
+### Disagreement 3: Is optimizing training-data sources (GitHub, Wikipedia, patents) worth the effort?
+- **Ryan Law** downplays this — arguing there's not much you can actually do to influence training-data inclusion, and treats RAG-visibility tactics as the actionable lever instead.
+- **Mike King and Chris Long** both point to concrete tactics here — sponsoring GitHub repos to get cited, and deliberately publishing to guaranteed-training-data surfaces like Wikipedia, patents, and research papers. Ryan Law later lists several of these as "worth considering," in tension with his own downplaying.
+- **My take:**
+### Disagreement 4: Is broad, top-of-funnel informational content still worth targeting?
+- **Aleyda Solis** warns against generic, off-brand informational content — citing sites that lost significant traffic in Google core updates after publishing shallow, off-brand content.
+- **Ryan Law's data** shows blogs/guides and informational content are among the most heavily cited page types by AI systems generally, without the same brand-alignment caveat.
+- **My take:**
+---
+ 
+## 9. What I Rejected and Why
+ 
+1. **Cloaking / serving different content to AI crawlers than to users.** Mike King mentions people are experimenting with this, but explicitly says his own team has not seen a significant impact from it. Ryan Law separately warns against black-hat tactics generally, calling them not worth it for legitimate brands long-term. Rejected: unproven upside, real reputational/technical downside if discovered.
+2. **Fully unedited, mass-produced AI content at scale.** Ryan Law calls out long AI-generated pages with no images/links as short-sighted, arguing AI systems will get better at filtering this the way Google did, and that being cited for spammy content that converts nobody isn't actually valuable. Rejected: even where it "works" short-term, it doesn't serve the actual business goal.
+---
+ 
+## 10. My Original Ideas
+ 
+**Idea: A weighted "ecosystem budget" model.** Several sources describe the existence of multiple ecosystems (own site, Reddit, affiliates, YouTube) and the need to segment by vertical, but none propose an actual method for allocating budget/effort across those ecosystems in a structured way. A workable approach: score each ecosystem for a given vertical on (a) citation frequency observed in your tracking tool, (b) cost/effort to influence, and (c) your current gap vs. competitors, then allocate a rolling percentage of content/PR budget accordingly, re-scored quarterly. This turns a qualitative "know your vertical" heuristic into a repeatable operational process — the missing piece between "Reddit matters more in some verticals" and an actual monthly budget line.
+ 
+---
+ 
+## 11. Weaknesses of This Playbook
+ 
+- **Small, homogenous source base.** Four experts, all fairly bullish on AEO as a discipline — no skeptical outside voice questioning whether AEO investment pays off at all for smaller brands.
+- **No cost/effort data.** None of the sources quantify how much budget or time these tactics require relative to expected payoff.
+- **Correlational, not causal, evidence.** The strongest data point in this playbook (branded mentions correlating with AI Overview appearance) is a correlation, not a proven causal lever.
+- **Fast-moving subject matter.** This space is still described by its own practitioners as a "wild west" — treat every tactic here as provisional.
+- **Missing expert diversity per the assignment.**
+---
+ 
+## 12. Who I Would NOT Recommend Following, and Why
+ 
+Candidate: **Mike King**, on narrow, specific grounds — not his expertise overall, but two things worth flagging for a reader deciding who to trust blindly:
+1. He repeatedly undercuts the reliability of AI-visibility tracking data (calling rank tracking "fundamentally flawed") while his own company sells/relies on this kind of analysis.
+2. Some claims in the interview are stated with high confidence but thin support — e.g., a four-reason case for why Google "wins long-term" trails off with an admitted forgotten fourth reason, delivered with the same confident tone as his rigorously-researched claims. A reader who can't tell the two apart risks over-trusting the latter.
+ 
