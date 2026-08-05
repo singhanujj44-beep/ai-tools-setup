@@ -130,12 +130,197 @@ User engagement
 ---
  
 ## 5. Prompt Library
- 
-- **Content brief prompt** — built around a "decompose into components" approach, with BLUF/declarative-sentence guidance.
-- **Entity-gap analysis prompt** — built around a competitor-comparison workflow using a citation-tracking tool like Brand Radar.
-- **Freshness-refresh triage prompt** — built around freshness-correlation findings.
+
+A standardized collection of reusable prompts to support AI-powered SEO workflows. Each prompt follows a consistent structure to ensure repeatability, quality, and collaboration across teams.
+
 ---
- 
+
+### 1. Keyword Research
+
+**Objective**
+
+Identify high-potential keywords and semantic opportunities for a target topic.
+
+#### Input
+
+- Industry
+- Target Audience
+- Seed Keyword
+
+#### Prompt
+
+```text
+Act as an SEO strategist.
+
+Generate a list of primary, secondary, and long-tail keywords for the topic:
+
+Topic: [TOPIC]
+
+For each keyword provide:
+- Search Intent
+- Difficulty (Low/Medium/High)
+- Suggested Content Type
+- User Pain Point
+- Related Semantic Keywords
+
+Return the output in a markdown table.
+```
+
+#### Expected Output
+
+- Primary Keywords
+- Secondary Keywords
+- Long-tail Keywords
+- Search Intent
+- Topic Clusters
+
+---
+
+### 2. Search Intent Analysis
+
+**Objective**
+
+Understand user intent before content planning.
+
+#### Input
+
+- Target Keyword
+
+#### Prompt
+
+```text
+Analyze the search intent for the keyword:
+
+"[KEYWORD]"
+
+Classify the intent as:
+- Informational
+- Commercial
+- Transactional
+- Navigational
+
+Explain why users search for this keyword.
+
+List the questions users are most likely trying to answer.
+```
+
+#### Expected Output
+
+- Search Intent Classification
+- User Objectives
+- Frequently Asked Questions
+
+---
+
+### 3. Competitor Analysis
+
+**Objective**
+
+Identify content gaps and competitive opportunities.
+
+#### Input
+
+- Topic
+- Primary Keyword
+
+#### Prompt
+
+```text
+Act as an SEO consultant.
+
+Analyze the top-ranking articles for:
+
+[TOPIC]
+
+Identify:
+
+- Common headings
+- Missing information
+- Weak arguments
+- Opportunities to create better content
+
+Finish by recommending how our article can outperform competitors.
+```
+
+#### Expected Output
+
+- Competitor Strengths
+- Content Gaps
+- Differentiation Opportunities
+
+---
+
+### 4. Content Brief Generation
+
+**Objective**
+
+Generate a standardized SEO content brief.
+
+#### Input
+
+- Topic
+- Target Audience
+- Primary Keyword
+
+#### Prompt
+
+```text
+Create a professional SEO Content Brief.
+
+Topic:
+Audience:
+Primary Keyword:
+
+Include:
+
+- Search Intent
+- Article Goal
+- Suggested Word Count
+- H1
+- H2
+- H3
+- FAQs
+- Internal Linking Opportunities
+- External References
+```
+
+#### Expected Output
+
+- Complete SEO Content Brief
+
+---
+
+### 5. First Draft Generation
+
+**Objective**
+
+Generate a structured first draft aligned with SEO best practices.
+
+#### Input
+
+- Approved Content Brief
+
+#### Prompt
+
+```text
+Write a detailed SEO article using the content brief.
+
+Requirements:
+
+- Human sounding
+- EEAT compliant
+- Practical examples
+- Avoid keyword stuffing
+- Include H2 and H3 hierarchy
+- Add FAQs
+- End with actionable recommendations
+```
+
+#### Expected Output
+
+- SEO-Optimized First Draft
+
+---
 ## 6. Quality Assurance Checklist
  
 | Check | Sourced? |
@@ -213,7 +398,10 @@ User engagement
  
 ## 12. Who I Would NOT Recommend Following, and Why
  
-Candidate: **Mike King**, on narrow, specific grounds — not his expertise overall, but two things worth flagging for a reader deciding who to trust blindly:
+Candidate: 
+**Kevin Indig** : Skeptical Linkedin, he has(seemingly) worked in every big-tech as SEO advisor(un-officially)
+
+**Mike King**, on narrow, specific grounds — not his expertise overall, but two things worth flagging for a reader deciding who to trust blindly:
 1. He repeatedly undercuts the reliability of AI-visibility tracking data (calling rank tracking "fundamentally flawed") while his own company sells/relies on this kind of analysis.
 2. Some claims in the interview are stated with high confidence but thin support — e.g., a four-reason case for why Google "wins long-term" trails off with an admitted forgotten fourth reason, delivered with the same confident tone as his rigorously-researched claims. A reader who can't tell the two apart risks over-trusting the latter.
  
